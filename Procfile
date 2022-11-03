@@ -1,0 +1,1 @@
+web: gunicorn jertex.wsgi --log-file -

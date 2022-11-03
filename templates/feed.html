@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>feed</title>
+</head>
+<body>
+    <header >
+        <nav>
+            
+               <a href="{% url 'feed' %}" class="logo">Jertex</a> 
+               <form action="" method="get" class="searchedform">
+                <input type="text" id="searchfeed" name="q" placeholder="Search for people,works,services..">
+                 </form>
+                <ul class="nav_links">
+                    <li><a class="nav_a" href="{% url 'home' %}">Home</a></li>
+                    <li><a  class="nav_a" href="#">services</a></li>
+                    <li><a  class="nav_a"  href="#">Contact Us</a></li>
+                    <li><a href="{% url 'logout' %}" class="logoutbtn">logout</a></li>
+                </ul> 
+        </nav>
+
+    </header>
+  
+<section class="feed">
+    <section class="userinfo">
+        <section class="border1">
+                <img class="profilepic"src="{% static 'images/icon-4399701_640.png' %}"><br>
+                <h3 class="userinfotext">{{data1.first_name}}</h3>
+                <h4 class=" consumertext">{{data1.last_name}}</h4><hr style="height: 5px; background-color: white;">
+                <h4 class="recentactivity">Recent Searches</h4> 
+                <ul class="recentlist">
+                    {% for j in data3 %}
+                         <li class=" listtext">{{j.searchresults}}...</li>
+                    {% endfor %}
+                </ul><hr style="height: 5px; background-color: white;">
+                <h4 class="recentactivity">
+                    Quick Links<br><br>
+                </h4>
+                <ul class="Quicklinkslist">
+                        <li class="quicklist">
+                            <a href="#" class="alist">Premium Services</a>
+                        </li>
+                        <li class="quicklist">
+                            <a href="{% url 'serviceproviderregister' %}" class="alist">Join as a contributor</a>
+                        </li>
+                        <li class="quicklist">
+                            <a href="{% url 'userprofile' %}" class="alist">Edit profile</a>
+                        </li>
+                        <li class="quicklist">
+                            <a href="#" class="alist">communities</a>
+                        </li>
+
+                </ul>
+
+
+        </section>
+    </section>
+    <section class="feedinfo">
+                {% if request.user.last_name == 'consumer' %}
+                    <span class="feedinfotitle">Order Your Services Now <a href="{% url 'orderservice' %}" class="orderbtn" >Order</a></span><br>
+                {% else %}
+                   <span class="feedinfotitle">Post Your Services Now <a href="{% url 'serviceproviderpost' %}" class="orderbtn" >POST</a></span><br>
+                {% endif %}
+                <!-- this is the posts of service providers -->
+                {% for i in data2 %}
+                <section class="indivisualservice">
+                        <section class="posts"> 
+                        <h2 class="serviceheading">{{i.workname.work}}</h2>
+                        <a href="#" class="serviceproviderusername">@{{i.host.first_name}}</a><br><span class="postedtime" >{{i.posted|timesince}}</span><br><span class="postedtime">Adhar verified</span> <br>
+                        <span class="posttext">{{i.messsage}}
+                            <br>See the pricing and ratings of {{i.host.first_name}} <br><br>
+                            <a href="{% url 'serviceproviderinfo' i.host %}" class="seemorebtn">More</a>
+                        </span>
+                        </section>
+                </section>
+                {% endfor %}
+    </section>
+             
+    <section class="groupingandothes">
+            <section class="border3">
+                 <br>
+                 <div class="listrow">
+                    <div class="servicename">
+                         <a href="{% url 'feed' %}" class="listitem">All</a>
+                    </div> 
+                    <div class="number">
+                       <span class="availablemembers">{{data5}}</span>
+                    </div>
+                </div>
+                <br><br>
+                {% for i in data6 %}
+                    <div class="listrow">
+                        <div class="servicename">
+                            <a href="{% url 'feed' %}?q={{i.workname}}" class="listitem">{{i.workname}}</a>
+                        </div>
+                            <div class="number">
+                                <span class="availablemembers">{{i.count}}</span>
+                            </div>   
+                    </div>     
+                    <br><br>    
+                {% endfor %}     
+            </section>
+            <br><br><br><br>
+            <section style="border-left:5px solid #f0960e;">
+                   <br><br>
+                   <h4 class="serviceheading" style="margin-left: 10px; color:white;">Join as a Service provider</h4><br>
+                   <a href="{% url 'serviceproviderregister' %}" class="orderbtn">Register</a><br><br>
+            </section>
+    </section>
+</section>
+
+
+
+
+
+
+</body>
+</html>

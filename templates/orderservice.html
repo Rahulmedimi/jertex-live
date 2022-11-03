@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/orderservice.css' %}">
+</head>
+<body>
+       <section class="order">
+              <h1 class="orderheading">
+                  Fill the details and complete the order
+              </h1>
+              <br>
+              <form action="#" method="POST" class="orderform">
+                   <select name="service" class="dropdetails">
+                       <option value="householdchores">householdchores</option>
+                       <option value="constructionworks">Construction works</option>
+                       <option value="plumbingservices">plumbingservices</option>
+                       <option value="gardening">gardening</option>
+                       <option value="nursing">nursing</option>
+
+                   </select><br> 
+                   <input type="text" name="serviceprovidername" class="boxdetails" placeholder="Username of service provider" required><br>
+                   <label class="datefieldlabel">Date of service :</label>
+                   <input type="date" name="dateofservice" class="datebox" placeholder="selectdate" required><br>
+                   <textarea name="address of client" class="textboxdetails" rows="4" cols="10" placeholder="Enter your full address" required></textarea><br>
+                  <input type="submit" class="submitbtn" value="Place order">
+                  <h2 class="or">Or</h2>
+                  <a href="{{request.META.HTTP_REFERER}}" class="submitbtn backbtn">Go Back</a>
+              </form>
+             
+
+       </section>
+</body>
+</html>

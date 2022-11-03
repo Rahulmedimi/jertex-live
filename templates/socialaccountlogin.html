@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/socialaccountlogin.css' %}">
+</head>
+<body>
+    <section class="socialform">
+        <h2 class="heading">Login Jertex Using Google or Facebook </h2>
+    </section>
+    <section class="googlesection">
+            <a href="#" class="googlebtn"> Google</a>
+    </section>
+    <h2 style="text-align:center;color:white;" >or</h2>
+    <section class="googlesection">
+        <a href="#" class="facebookbtn">Facebook</a>
+    </section>
+    <br><br>
+    <section class="googlesection">
+        <a href="{% url 'home' %}" class="goback">Go back</a>&nbsp;&nbsp;&nbsp;<a href="{% url 'registeroption' %}" class="goback">Sign up</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/consumerregister.css' %}">
+    <style>
+            
+     .messageinfo{
+        margin-left: 1200px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: #f59797;
+        font-family: 'Montserrat', sans-serif;
+        color:rgb(1, 1, 1);
+        padding: 20px 30px;
+        border-radius: 20px;
+        font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+      <div class="register"> 
+                     
+        
+                <div class="flashmessages">
+                   <a class="logo" href="{% url 'home' %}" class="logo">Jertex</a>     
+                    {% if messages %} 
+                        {% for message in messages %}
+                                <ul>
+                                    <li>  <span class="messageinfo"> {{message}}</span></li> 
+                                </ul>
+                        {% endfor %}
+                    {% endif %} 
+                </div>
+                   <h1 class="heading">Stay updated with the professional World
+                   </h1>         
+                    <form class="registerform" action="" method="POST" >
+                        {% csrf_token %}
+                        <div class="uploaddiv">
+                            <img class="upload"src="{% static 'images/icon-4399701_640.png' %}">
+                            <label class="label uploadbutton" for="profilepic">upload photo </label>
+                        </div>
+                        <input type="file"  name="profilepic" id="profilepic" ><br>
+                        <label class="label" for="username">Create Username :</label>
+                        <input type="text" class="inputfields" style="margin-left:145px; margin-top: 0px;" name="username" id="username" required><br>
+                        <label class="label" for="password">Create Password :</label>
+                        <input type="password" class="inputfields" name="password" id="password" required><br>
+                        <label class="label" for="password2">Verify Password :</label>
+                        <input type="password" class="inputfields" name="password2" id="password2" required><br>
+                        <label class="label" for="f_name">Name :</label>
+                        <input type="text" class="inputfields" style="margin-left:95px;" name="f_name" id="f_name" required><br>
+                        <label class="label" for="email">Email:</label>
+                        <input type="text" class="inputfields" style="margin-left:99px;" name="email"  id="email" required><br>
+                        {% block content %}
+
+                        {% endblock content %}
+                        <h4 class="terms">By clicking Register, you agree to the Jertex <a href="#" class="terms">User Agreement,</a><a href="#" class="terms">Privacy Policy,</a>and<a href="#" class="terms"> Cookie Policy.</a>   </h4>
+                        <input type="submit" value="Register" class="registerbutton">
+                        <h2 class="or">or</h2>
+                        <h4 class="state">Already on Jertex? <a class="cta" href="{% url 'login' %}">Login</a></h4>
+                        
+
+
+
+                    </form>
+    </div> 
+    
+</body>
+</html>

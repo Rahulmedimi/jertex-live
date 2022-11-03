@@ -1,0 +1,47 @@
+body{
+    background-color: rgba(21, 15, 25, 0.942);
+}
+
+.text{
+    font-family: 'Montserrat', sans-serif;
+    color: #f0960e;
+    text-align: center;
+    font-weight: 80px;
+    font-size: 30px;
+    margin-top: 50px;
+
+}
+
+.btn{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.loginbtn{
+    text-decoration: none;
+    color: white;
+    background-color: #04740b;
+    border-radius: 15px;
+    padding:10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.loginbtn:hover{
+    background-color: #07c514;
+}
+
+.gobackbtn{
+    text-decoration: none;
+    color: white;
+    background-color: #f11f07;
+    border-radius: 15px;
+    padding:10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.gobackbtn:hover{
+    background-color: #b41a09;
+}

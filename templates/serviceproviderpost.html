@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/serviceproviderpost.css' %}">
+</head>
+<body>
+      <section class="servicepost">
+            <h2 class="postheading">
+                Hello User<br>
+                Post Your Service
+            </h2><br>
+            <form action="" method="POST" class="postform">
+                {% csrf_token %}
+                <select name="servicename" class="dropdetails">
+                    <option value="nursingservivces">Nursing services</option>
+                    <option value="constructionservices">Constructionservices</option>
+                    <option value="plumbingservivces">Plumbing services</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="Caretakerservices">Caretaker services</option>
+                    
+                </select><br>
+                <textarea name="costingdetails" class="costbox" rows="4" cols="50" placeholder="Enter the cost and money relatable matters which needs to be displayed in your bio as well as msg in the format [statement : Cost] in list like points "></textarea><br>
+                <textarea name="msgtext" class="costbox" rows="4" cols="50" placeholder="Enter the text which needs to be displayed in msg post in feed"></textarea><br>
+                <input type="submit" value="Post" class="postbtn">
+                <h2 class="or">or</h2>
+                <a href="{{request.META.HTTP_REFERER}}" class="backbtn">Go Back</a>
+                
+
+
+
+            </form>
+      </section>    
+    
+
+
+</body>
+</html>

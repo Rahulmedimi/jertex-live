@@ -1,0 +1,19 @@
+{% extends "consumerregister.html" %}
+{% block content %}
+<body>
+    <label class=" label"   for="age">Age :</label>
+    <input type="number" style="margin-left:105px;" class="inputfields" name="age" id="age" required><br>
+    <label class="label" for="servicenameid">Servicename :</label>
+    <select name="servicename" class="inputfields" style="margin-left:150px;" id="servicenameid">
+        <option value="nursingservivces">Nursing services</option>
+        <option value="constructionservices">Constructionservices</option>
+        <option value="plumbingservivces">Plumbing services</option>
+        <option value="gardening">Gardening</option>
+        <option value="Caretakerservices">Caretaker services</option>
+    </select><br>
+    <label class="label" style="margin-right: 55px;"  for="experience">Experience:</label>
+    <input type="number" class="inputfields" style="margin-left:150px;"name="experience" id="experience">
+</body>
+{% endblock content %}
+
+

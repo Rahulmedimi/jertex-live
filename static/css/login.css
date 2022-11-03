@@ -1,0 +1,75 @@
+body{
+    background-color: rgba(21, 15, 25, 0.942);
+}
+
+.loginform{
+    text-align: center;
+}
+
+.login{
+    margin-top: 100px;
+}
+.loginheading{
+    text-align: center;
+    color: #f0960e;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.labeldetails{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.boxdetails{
+    background-color: #f0960e;
+    border-radius: 10px;
+    height: 30px;
+    width:300px;
+    margin-bottom: 15px;
+    border:None;
+    cursor: pointer;
+}
+
+.loginbtn{
+    cursor: pointer;
+    color: white;
+    background-color: #04740b;;
+    padding: 7px 80px;
+    border-radius: 20px;
+    border: none;
+    font-size:20px;
+    margin-top: 15px;
+    transition: 0.2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginbtn:hover{
+    background-color: #07c514;;
+}
+
+.or{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.socialaccounts{
+    cursor: pointer;
+    color: white;
+    background-color: #3b5998;
+    padding: 7px 30px;
+    border-radius: 20px;
+    border: none;
+    font-size:20px;
+    text-decoration: None;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.socialaccounts:hover{
+    background-color: #0d2d6f;
+}
+

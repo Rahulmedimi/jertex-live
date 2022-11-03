@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/serviceproviderinfo.css' %}"
+</head>
+<body>
+    <h2 class="serviceinfoheading">Know about your service provider</h2> 
+    <section class="servicebody">
+            <section class="infodata" >
+                        <img src="{% static 'images/899048ab0cc455154006fdb9676964b3.jpg' %}" class="servicephoto"><br><br>
+                        <span class="name">{{data1.username}}</span> 
+                        <form action="#" method="post" >
+                            <input type="submit" class="connectbtn" value="Connect Now">
+                        </form>
+                        <span class="name">Personal details</span><br> 
+                        <div class="profilebody" style="line-height:30px;">
+                            Name : {{data1.first_name}}<br>
+                            Age  : {{data1.age}} Years<br>
+                            Occupation: {{data2.occupation}}<br>
+                            Adhar verified: Yes<br>
+                            overall ratings : 4.0&#9733<br>
+                            Experience : {{data1.experience}} Years
+                        </div>
+
+
+
+
+
+
+
+                        <span class="name">Cost and service Charges</span><br>  
+                        <div class="profilebody" style="line-height:30px;">
+                            Cost Of Mason Per day work is : Rs 700<br>
+                            Cost of Helper Per day is     : Rs 500<br>
+                            Material Costs are excluded<br>
+                            Service charges and transport charges will be informed while contacting with Service provider.<br>
+                            Later you can confirm Order based on your convienience
+                        </div>
+                        <span class="name">Reviews and Ratings</span><br> 
+                        <div class="profilebody">
+                            <h2>Ratings</h2>
+                            <label for="5rating">5 &#9733</label>
+                            <progress id="5rating" value="65" max="100"></progress><br>
+                            <label for="4rating">4 &#9733</label>
+                            <progress id="4rating" value="45" max="100"></progress><br>
+                            <label for="3rating">3 &#9733</label>
+                            <progress id="3rating" value="25" max="100"></progress><br>
+                            <label for="2rating">2 &#9733</label>
+                            <progress id="2rating" value="15" max="100"></progress><br>
+                            <label for="1rating">1 &#9733</label>
+                            <progress id="1rating" value="5" max="100"></progress><br>
+                        </div>
+                        <div class="profilebody">
+                            <span class="clientid"> @Siva</span><br>
+                            Good work and descent behaviour. Satisfied with service<br>
+                            <span class="clientid"> @rahul</span><br>
+                             This is what I want.very good<br>
+                            <span class="clientid"> @Siva</span><br>
+                            Quality technisian also not charging extra penny<br>
+
+                        </div>
+
+
+
+                        
+            </section>
+            <section class="moresimilar">
+                   <section class="quicklinks">
+                       <h2 class="quicklinksheading">Quick links</h2><br>
+                         <div class="linksdiv"><a href="{{request.META.HTTP_REFERER}}" class="links">Go Back</a></div><br>
+                         <div class="linksdiv"><a href="{% url 'userprofile' %}" class="links">UserProfile</a></div><br>
+                         <div class="linksdiv"><a href="{% url 'feed' %}?q={{data2.occupation}}" class="links">More similar profiles</a></div><br>
+                        
+                   </section>
+                    
+
+            </section>
+        
+
+
+
+
+
+
+   </section>
+</body>
+</html>

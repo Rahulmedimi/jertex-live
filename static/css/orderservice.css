@@ -1,0 +1,127 @@
+body{
+    background-color: rgba(21, 15, 25, 0.942);
+}
+
+.orderheading{
+    font-family: 'Montserrat', sans-serif;
+    color: #f0960e;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 100px;
+    margin-bottom: 55px;
+}
+
+
+.labeldetails{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    /* text-align: center; */
+    font-weight: 400;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.dropdetails{
+    height: 30px;
+    width: 500px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #f0960e;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.orderform{
+    text-align: center;
+}
+
+.textdetails{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size:25px ;
+
+}
+.boxdetails{
+    height: 25px;
+    width: 490px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #f0960e;
+    cursor: pointer;
+    
+
+}
+
+
+
+::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.datefieldlabel{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.datebox{
+    height: 25px;
+    width: 265px;
+    margin-top: 30px;
+    background-color: #f0960e;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 50px;
+
+    
+}
+
+.textboxdetails{
+    height: 25px;
+    width: 490px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #f0960e;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.submitbtn{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    border: none;
+    background-color: #0b72c0;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.submitbtn:hover{
+    background-color: #05375e;
+}
+
+.or{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.backbtn{
+    background-color:red;
+    text-decoration:none;
+}
+.backbtn:hover{
+    background-color:rgb(172, 65, 8);
+}

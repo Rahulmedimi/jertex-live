@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Hubballi&family=Montserrat&family=Patrick+Hand&display=swap');
+
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 50px;
+    background-color:  rgba(33, 3, 54, 0.942);
+    margin-left: 25px;
+    margin-right: 25px;
+   
+}
+
+.dashboard{
+  
+    background-color: rgba(21, 15, 25, 0.942);
+    width:333px;
+    margin-left: 130px;
+    border-radius: 20px;
+    
+   
+    
+    
+}
+
+.profiledetails{
+
+    padding-left:10px;
+    background-color: rgba(21, 15, 25, 0.942);
+    margin-left: 0px;
+    border-radius: 20px;
+    margin-right: 300px;
+    
+}
+
+
+
+.section1{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    
+    
+    
+}
+
+.contents{
+    list-style-type: None;
+    padding-left: 0px;
+    
+}
+.contentsitems{
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: 600;
+    line-height: 70px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 112px;
+    border-radius: 25px;
+    color: white;
+    
+
+}
+
+.contentsitems:hover{
+        background-color: #f0960e;
+       
+        
+}
+
+
+.contentheading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+   
+    margin-bottom: 15px;
+    font-weight:bolder;
+    color: rgb(237, 238, 238);
+    background-color: #f0960e;
+    display: inline-block;
+    padding-left: 110px;
+    padding-right: 112px;
+    border-radius: 15px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+
+}
+
+.contentsitems2{
+    padding-right: 126px;
+}
+.contentsitems3{
+    padding-right: 116px;
+}
+.contentsitems4{
+    padding-right: 120px;
+}
+.contentsitems5{
+    padding-right: 148px;
+}
+
+
+
+
+
+
+.material-icons{
+    color: rgba(243, 243, 234, 0.808);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.profiledetails{
+    padding-left: 25px;
+}
+
+
+
+.headingprofile{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(241, 243, 245);
+    font-weight: bolder;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.profilepic{
+    margin-top: 25px;
+    height: 150px;
+    width: 150px;
+    position: fixed;
+    border: 2px solid #f0960e;
+    border-radius: 50%;
+    
+}
+
+#chooseimg{
+    display: none;
+
+}
+
+.chooseimgbtn{
+    margin-left: 25px;
+    background-color: #f74b07;
+    padding: 15px;
+    position: absolute;
+    left:690px;
+    top:225px;
+    border-radius: 24px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.chooseimgbtn:hover{
+    background-color: #e6650f;
+}
+
+.additionalinfo{
+    margin-top: 200px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(241, 241, 241);
+    text-transform: uppercase;
+    
+}
+
+.editdetails{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    color:  rgb(241, 241, 241);
+}
+
+
+.boxdetails{
+   margin-top: 15px;
+   margin-left: 100px;
+   height:40px;
+   width: 350px;
+   border-radius: 15px;
+   border: 2px solid rgb(5, 12, 17);
+   background-color: #f0960e;
+   cursor: pointer;
+   color: azure;
+   font-weight: bold;
+   font-family: 'Montserrat', sans-serif;
+
+}
+
+.dropdetails{
+    margin-top: 10px;
+    margin-left: 28px;
+    height:40px;
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid rgb(5, 12, 17);
+    font-weight: bold;
+    background-color: #f0960e;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    color: white;
+    
+}
+
+.dropdetails::selection{
+    background-color: #f0960e;
+}
+
+.emaildetails{
+    margin-left: 115px;
+}
+
+.savebtn{
+    width: 100px;
+    height: 50px;
+    background-color: #f74b07;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border:None;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+
+}
+
+.savebtn:hover{
+    background-color: #e6650f;
+}
+
+

@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        li.benefitlistitem::before{
+            background-image: url("{% static 'images/greentick (1) (1).png' %}");
+            content: '';
+            display:block;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-size: contain;
+            position:absolute;
+            margin-top: 25px;
+            margin-left: -28px;
+        }
+        li.notmentioneditem::before{
+            background-image: url("{% static 'images/cross (1).png' %}");
+            content: '';
+            display:block;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-size: contain;
+            position:absolute;
+            margin-top: 25px;
+            margin-left: -28px;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+               <a href="{% url 'home' %}" class="logo">Jertex</a> 
+                <ul class="nav_links">
+                    <li><a class="nav_a" href="{% url 'home' %}">Home</a></li>
+                    <li><a  class="nav_a" href="{% url 'feed' %}">services</a></li>
+                    <li><a  class="nav_a"  href="#">Contact Us</a></li>
+                    {% if request.user.is_authenticated %}
+                          <li class="logbtn"> <a href="{% url 'logout' %}" class="cta">logout</a></li>
+                    {% else %}
+                          <li class="logbtn"> <a href="{% url 'login' %}"  class="cta">login</a></li>
+                    {% endif %}      
+                </ul> 
+               
+        </nav>
+
+    </header>
+    <section class="body1">
+               <div class="main1">
+                       <div class="part1">
+                                <h1>Join the community <br> find the right one for your work</h1>
+                                <form class="login" action="" method="POST">
+                                    {% csrf_token %}
+                                    {% if  request.user.is_authenticated %}
+                                                      
+                                    {% else %}
+                                            <input type="text" class="inputdata" name="username" placeholder="Username....."><br>
+                                            <input type="password" class="inputdata" name="password" placeholder="Password....."><br>
+                                            <input type="submit" class=" inputdata submitdata"  value="Sign in">
+                                            
+                                                        <div> 
+                                                            <h1 class="or">or</h1> <br>
+                                                            <div class="googlelogin">
+                                                                <a href="{% url 'socialaccountsconsumer' %}" class="googlebtn">
+                                                                    Sign in Using Social accounts
+                                                                </a>
+                                                            </div>      
+                                                        </div>
+                                    {% endif %}         
+                                </form>
+                        
+                        </div> 
+                        <div class="mainimg">
+                             <img  src="{% static 'images/cleaning (1).png' %}" style="width: 800px; height: 500px;">
+                        </div> 
+                         
+                </div>
+
+
+
+
+                <div class="main2">
+                            <div class="text2">
+                                        <h1 class="text2heading">
+                                            Explore the odd jobs <br> you want us to deal them
+                                        </h1>
+                            </div>
+                            <div class="topics">
+                                        <a class="topicslinks" href="{% url 'feed' %}?q=electrical">Electrical works</a>
+                                        <a  class="topicslinks" href="{% url 'feed' %}?q=housemaid">House maid services</a>
+                                        <a class="topicslinks" href="{% url 'feed' %}?q=plumbing">Plumbing works</a><br><br><br>
+                                        <a class="topicslinks" href="{% url 'feed' %}?q=construction">construction works</a>
+                                        <a class="topicslinks" href="{% url 'feed' %}?q=caretaker">caretaker services</a><br><br><br>
+                                        <a class="topicslinks" href="{% url 'feed' %}?q=gardening">gradening and plantation</a>
+                            </div>
+                </div>
+
+
+
+                <div class="main3">
+                            <div class="text3">
+                                        <h1 class="text3heading">Join Now<br> Work in the Place you are meant for <br> </h1>
+                                        <br><br>
+                                        <a class="register"   href="{% url 'registeroption' %}">Register yourself</a>
+                            </div>
+                            <div class="benefits">
+                                
+                                        <ul class="benefitlist">
+                                                    <li class="benefitlistitem">
+                                                        everyday find new sets of jobs
+                                                    </li>
+                                                    <li class="benefitlistitem notmentioneditem">
+                                                        Cuttings from your payment
+                                                    </li>
+                                                    <li class="benefitlistitem">
+                                                        Direct contact with consumer
+                                                    </li>
+                                                    <li class="benefitlistitem">
+                                                        skill enhancement and higher pay
+                                                    </li>
+                                       </ul>
+                            </div>
+
+               </div>
+              <div class="footer">
+                            <div class="col1">
+                                <h1>Jertex</h1>
+                            </div>
+                            <div class="linkslist1">
+                                   <ul class="sublinklist1">
+                                       <li class="linklistitem">
+                                           <h1>General</h1>
+                                       </li>
+                                       <li class="linklistitem">
+                                           <a href="{% url 'consumerregister' %}">signup</a>
+                                       </li>
+                                       <li class="linklistitem">
+                                        <a href="#">vision</a>
+                                    </li>
+                                    <li class="linklistitem">
+                                        <a href="#">helpcenter</a>
+                                    </li>
+                                    <li class="linklistitem">
+                                        <a href="#">contact us</a>
+                                    </li>
+                                    <li class="linklistitem">
+                                        <a href="#">about</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="linkslist2">
+                                <ul class="sublinklist2">
+                                    <li class="linklistitem">
+                                        <h1>Directories</h1>
+                                    </li>
+                                    <li class="linklistitem">
+                                        <a href="#">Our Team</a>
+                                    </li>
+                                    <li class="linklistitem">
+                                     <a href="#">Support Us</a>
+                                 </li>
+                                 <li class="linklistitem">
+                                     <a href="#">Join our teamr</a>
+                                 </li>
+                                 <li class="linklistitem">
+                                     <a href="#">Suppporting Groups</a>
+                                 </li>
+                                 <li class="linklistitem">
+                                     <a href="#">Location</a>
+                                 </li>
+                             </ul>
+
+                         </div>
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+</body>
+</html>

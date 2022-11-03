@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section1">
+          <div class="dashboard">
+              <ul class="contents">
+                        <li class="contentheading">Dashboard</li><br>
+                        <li class="contentsitems contentsitems1"><i class="material-icons">info</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Information</li><br>
+                        <li class="contentsitems contentsitems2"><i class="material-icons">shopping_cart</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; My Orders</li><br>
+                        <li class="contentsitems contentsitems3"><i class="material-icons">redeem</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; My rewards</li><br>
+                        <li class="contentsitems contentsitems4"> <i class="material-icons">reviews</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  My reviews</li><br>
+                        <li class="contentsitems contentsitems5"><i class="material-icons">favorite</i>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Wishlist</li>
+
+
+              </ul>
+          </div>
+          <div class="profiledetails">
+                   <a href="#"  class="headingprofile"> <h1 class="headingprofile">Edit Profile</h1>   </a>        
+                    <img src="{% static 'images/899048ab0cc455154006fdb9676964b3.jpg' %}" class="profilepic"><label for="chooseimg" class="chooseimgbtn">Choose Img </label>
+                    <input type="file" id="chooseimg">
+                    <h1 class="additionalinfo">account information :</h1>
+                    <label for="username" id="editusername" class="editdetails">Edit username :</label>
+                    <input class="boxdetails" id="username" type="text" ><br><br>
+                    <label for="password" id="editpassword" class="editdetails">Edit password :</label>
+                    <input class="boxdetails" id="username" type="text" > <br><br>
+                    <h3 class="editdetails">Change Account Type  :
+                    <select name="accounttype" class="dropdetails">
+                        <option value="consumer">Consumer</option>
+                        <option value="serviceprovider">service Provider</option>
+                        <option value="both">Both</option>
+                    </select><br><br>
+                    <label for="email" class="editdetails ">Change Email :</label>
+                    <input type="email" id="email" class="boxdetails emaildetails"><br><br>
+                <input type="submit" class="savebtn" value="Save">
+
+            
+
+
+
+
+
+
+                  
+
+            
+
+          </div>
+          
+
+
+    </div>
+</body>
+</html>

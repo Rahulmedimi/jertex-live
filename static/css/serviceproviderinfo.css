@@ -1,0 +1,119 @@
+body{
+    background-color: rgba(21, 15, 25, 0.942);
+}
+.servicephoto{
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    border: 5px solid #f0960e;
+    margin-left:35px;
+}
+
+.serviceinfoheading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #f0960e;
+    text-align: center;
+    font-size: 40px;
+}
+
+.servicebody{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: #f0960e;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 70px;   
+}
+
+.profilebody{
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-left:50px;
+    padding-left:20px;
+    border-left:7px solid #f0960e;
+    font-size:20px;
+    margin-bottom: 35px;
+}
+
+.quicklinks{
+    border-left: 5px solid #f0960e;
+    margin-right: 20px;
+   
+}
+
+.infodata{
+    margin-right:50px ;
+}
+
+.clientid{
+    color:greenyellow;
+    font-size: 15px;
+}
+
+.connectbtn{
+    cursor: pointer;
+    background-color: #04740b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size:20px;
+    margin-top: 15px;
+    margin-left: 70px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.connectbtn:hover{
+    background-color: #07c514;
+
+}
+
+.quicklinksheading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 2px;
+
+
+}
+
+.linksdiv {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.links{
+    text-decoration: None;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    background-color:#04740b;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+
+}
+
+.links:hover{
+    background-color: #07c514;
+}
+
+
+

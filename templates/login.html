@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="loginheading">Login into Jertex</h1>
+    <section class="login">
+           
+           <form action="" method="post" class="loginform">
+               {% csrf_token %}
+                <label for="username" class="labeldetails">username :</label>
+                <input type="text" class="boxdetails" id="username"   name="username"><br>
+                <label for="password" class="labeldetails">password :</label>
+                <input type="password" class="boxdetails" id="password" name="password"><br>
+                <input type="submit" value="login" class="loginbtn">
+                <h2 class="or">or</h2>
+                <a href="{% url 'socialaccountsconsumer' %}" class="socialaccounts">social accounts</a>
+           </form>
+             
+
+    </section>
+</body>
+</html>
